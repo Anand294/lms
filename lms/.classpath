@@ -10,5 +10,15 @@
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/anand.kumar1/OneDrive - SPARKMINDAASHOKMINDAGROUP/minda_apps/MIS/src/main/webapp/WEB-INF/lib/spring-web-6.1.11.jar"/>
+	<classpathentry kind="lib" path="C:/Users/anand.kumar1/.m2/repository/com/zaxxer/HikariCP/5.1.0/HikariCP-5.1.0.jar" sourcepath="C:/Users/anand.kumar1/.m2/repository/com/zaxxer/HikariCP/5.1.0/HikariCP-5.1.0-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="org.eclipse.jst.component.archivename" value="HikariCP-5.1.0.jar"/>
+			<attribute name="maven.groupId" value="com.zaxxer"/>
+			<attribute name="maven.artifactId" value="HikariCP"/>
+			<attribute name="maven.version" value="5.1.0"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
