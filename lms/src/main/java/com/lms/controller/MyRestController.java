@@ -52,6 +52,7 @@ public class MyRestController {
 		jsonObj.put("id", 5);
 		return jsonObj;
 	}
+	
 	@PostMapping
 	public HashMap<String, String> addBook(@RequestBody Master master){
 		HashMap<String, String> hMap=new HashMap<String, String>();
