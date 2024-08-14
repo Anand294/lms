@@ -6,6 +6,7 @@ import java.util.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -50,6 +51,16 @@ public class MyRestController {
 		jsonObj.put("isSuccess", true);
 		jsonObj.put("id", 5);
 		return jsonObj;
+	}
+	@PutMapping
+	public HashMap<String, String> addBook(@RequestBody Master master){
+		HashMap<String, String> hMap=new HashMap<String, String>();
+		try {
+			
+		}catch(Exception ex) {
+			System.out.println("Error in function-> "+this.getClass().getName()+".addBook()--> "+ex.toString());
+		}
+		return hMap;
 	}
 	
 	
