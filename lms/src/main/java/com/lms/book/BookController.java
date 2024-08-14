@@ -13,17 +13,19 @@ public class BookController {
     private BookService bookService;
 
     @PostMapping
-    public BookMaster createBook(@RequestBody BookMaster book) {
+    public BookMaster createBook(@ModelAttribute BookMaster book) {
+		
         return bookService.createBook(book);
     }
 
-    @GetMapping("/{id}")
-    public Optional<BookMaster> getBookById(@PathVariable int id) {
-        return bookService.getBookById(id);
+    @GetMapping("/{bookId}")
+    public Optional<BookMaster> getBookById(@PathVariable("bookId") int bookId) {
+        return bookService.getBookById(bookId);
     }
 
     @GetMapping("/all")
     public Iterable<BookMaster> getAllBooks() {
+    	System.out.println(bookService.getBookById(1).toString());
         return bookService.getAllBooks();
     }
 

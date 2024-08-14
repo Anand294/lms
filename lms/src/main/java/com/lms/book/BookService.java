@@ -15,8 +15,8 @@ public class BookService {
         return bookRepository.save(book);
     }
 
-    public Optional<BookMaster> getBookById(int id) {
-        return bookRepository.findById(id);
+    public Optional<BookMaster> getBookById(int bookId) {
+        return bookRepository.findById(bookId);
     }
 
     public Iterable<BookMaster> getAllBooks() {

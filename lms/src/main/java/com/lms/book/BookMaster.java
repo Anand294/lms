@@ -1,5 +1,7 @@
 package com.lms.book;
 
+import org.antlr.v4.runtime.misc.NotNull;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,13 +13,14 @@ public class BookMaster {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	public int bookId;
-	public String bookName;
-	public String author;
-	public String bookDesc;
-	public String domain;
-	public int quantity;
-	public String Status;
+	public int bookId=0;
+	@NotNull
+	public String bookName="";
+	public String author="";
+	public String bookDesc="";
+	public String domain="";
+	public int quantity=0;
+	public String status="Active";
 	public int getBookId() {
 		return bookId;
 	}
@@ -55,10 +58,10 @@ public class BookMaster {
 		this.quantity = quantity;
 	}
 	public String getStatus() {
-		return Status;
+		return status;
 	}
 	public void setStatus(String status) {
-		Status = status;
+		this.status = status;
 	}
 	
 	
