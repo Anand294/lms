@@ -18,6 +18,7 @@
     <input type="button" onclick="getData()" value="MIS Application">
 <div id="divId"></div>
 <div id="divId1"></div>
+<div id="divId2"></div>
 
 </body>
 <script>
