@@ -34,4 +34,20 @@ public class BookService {
             bookRepository.save(book);   // Save the updated book entity
         }
     }
+    public void updateBookQuantity(int bookId,int quantity,String transType) {
+    	Optional<BookMaster> bookOpt=bookRepository.findById(bookId);
+    	
+    	if(bookOpt.isPresent()) {
+    		BookMaster book = bookOpt.get();
+    		if(transType.equalsIgnoreCase("lend")) {
+    			book.setQuantity(book.getQuantity()-quantity);
+    		}
+    		else if(transType.equalsIgnoreCase("return")) {
+    			book.setQuantity(book.getQuantity()+quantity);
+    		}
+              
+    		bookRepository.save(book);
+    	}
+    	
+    }
 }
