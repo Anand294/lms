@@ -30,5 +30,6 @@ public class UserController {
 	public Iterable<UserMaster> getallUsers(){
 		return userService.getAllUsers();
 	}
+	
 
 }

@@ -16,10 +16,11 @@ public class TransactionService {
 
 	@Autowired
 	private TransactionsRepository transactionsRepository;
-	
+	@Autowired
+    private BookService bookService;
     
 	public TransactionsMaster addUpdate(TransactionsMaster transactions){
-		 new BookService().updateBookQuantity(transactions.getBookId(), transactions.getQuantity(), transactions.getTransType());
+		 bookService.updateBookQuantity(transactions.getBookId(), transactions.getQuantity(), transactions.getTransType());
 		return transactionsRepository.save(transactions);
 	}
 	public Optional<TransactionsMaster> getTransactionById(int id){

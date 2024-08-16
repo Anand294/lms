@@ -1,5 +1,7 @@
 package com.lms.transactions;
 
+import java.time.LocalDateTime;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,7 +21,7 @@ public class TransactionsMaster {
 	private int bookId=0;
 	private int quantity=0;
 	private String transType="";
-	private String transDate="";
+	private LocalDateTime transDate=LocalDateTime.now();
 	private String status="Active";
 	
 	public int getTransId() {
@@ -52,10 +54,10 @@ public class TransactionsMaster {
 	public void setTransType(String transType) {
 		this.transType = transType;
 	}
-	public String getTransDate() {
+	public LocalDateTime getTransDate() {
 		return transDate;
 	}
-	public void setTransDate(String transDate) {
+	public void setTransDate(LocalDateTime transDate) {
 		this.transDate = transDate;
 	}
 	public String getStatus() {

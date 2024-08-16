@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/transactios")
+@RequestMapping("/transactions")
 public class TransactionsController {
 	@Autowired
 	private TransactionService transactionService;
