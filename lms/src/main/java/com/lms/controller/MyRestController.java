@@ -45,13 +45,13 @@ public class MyRestController {
 			
 		return hMap;
 	}
-	@GetMapping("/getObj")
-	public JSONObject getObject(){
-		JSONObject jsonObj= new JSONObject();
-		jsonObj.put("isSuccess", true);
-		jsonObj.put("id", 5);
-		return jsonObj;
-	}
+	
+	  @GetMapping("/getObj") public JSONObject getObject(){ 
+		  JSONObject jsonObj= new JSONObject();
+		  jsonObj.put("isSuccess", true); jsonObj.put("id", 5);
+		  return jsonObj;
+		  }
+	 
 	
 	@PostMapping
 	public HashMap<String, String> addBook(@RequestBody Master master){
