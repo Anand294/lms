@@ -36,6 +36,15 @@ public class TransactionsController {
 	public void deleteTransaction(@PathVariable("id") int id) {
 		transactionService.inactivateTransaction(id);
 	}
+	
+    @GetMapping("/byUser/{id}")
+    public Iterable<TransactionsMaster> getTransactionsByUserId(@PathVariable("id") int id){
+    	return transactionService.getTransactionsByUser(id+"");
+    }
+    @GetMapping("/byBook/{id}")
+    public Iterable<TransactionsMaster> getTransactionsByBookId(@PathVariable("id") int id){
+    	return transactionService.getTransactionsByBook(id+"");
+    }
 
 	
 }

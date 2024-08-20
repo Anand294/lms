@@ -37,4 +37,11 @@ public class TransactionService {
     		transactionsRepository.save(transaction);
     	}
     }
+    public Iterable<TransactionsMaster> getTransactionsByUser(String UserId){
+    	return transactionsRepository.findByUserId(UserId);
+    }
+    public Iterable<TransactionsMaster> getTransactionsByBook(String BookId){
+    	return transactionsRepository.findByBookId(BookId);
+    }
+    
 	}
