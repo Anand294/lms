@@ -13,7 +13,7 @@
 <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-  <script defer="defer" src="./js/main.eded8f6e.js"></script>
+  <script defer="defer" src="./js/main.4c09200b.js"></script>
   <link href="./css/main.f855e6bc.css" rel="stylesheet">
 
 <title>Insert title here</title>
@@ -41,7 +41,7 @@ $.ajax({
 		 data : data,
 		 success: function(result){	
             var resturnStr="";
-			 console.log(result);
+			 
              result.forEach(element => {
 resturnStr+="<tr><td>"+element.id+"</td><td>"+element.name+"</td><td>"+element.address+"</td></tr>";
                  
@@ -52,16 +52,7 @@ resturnStr+="<tr><td>"+element.id+"</td><td>"+element.name+"</td><td>"+element.a
 		  }
 });
     }
-    $.ajax({
-   	 url : "./getObj",
-   		 type: "GET",
-   		 data : data,
-   		 success: function(result){
-   			 console.log(result["id"]);
-   			alert(result.isSuccess); 
-   		 }
-   		 });
-
+   
 
 </script>
 </html>

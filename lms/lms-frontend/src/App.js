@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import useBooksMap from './books';
 
 function App() {
   const [transactions, setTransactions] = useState([]);
   const [books, setBooks] = useState([]);
-  const bookIdToNameMap = useBooksMap();
+  const [bookIdToNameMap, setBookIdToNameMap] = useState({});
   const [error, setError] = useState(null); // Add error state
 
   useEffect(() => {
@@ -20,7 +19,22 @@ function App() {
       });
 
     // Fetch books
-   
+    fetch("./books/all")
+      .then(response => response.json())
+      .then(data => {
+        setBooks(data);
+        // Create a map of bookId to bookName
+        const idToNameMap = {};
+        console.log(data);
+        data.forEach(book => {
+          idToNameMap[book.bookId] = book.bookName;
+        });
+        setBookIdToNameMap(idToNameMap);
+      })
+      .catch(err => {
+        console.error('Error fetching books:', err);
+        setError(err); // Set error state
+      });
   }, []);
 
   return (
