@@ -13,7 +13,7 @@
 <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-  <script defer="defer" src="./js/main.4c09200b.js"></script>
+  <script defer="defer" src="./js/main.b9278ea8.js"></script>
   <link href="./css/main.f855e6bc.css" rel="stylesheet">
 
 <title>Insert title here</title>
